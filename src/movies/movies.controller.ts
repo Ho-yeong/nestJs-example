@@ -9,7 +9,8 @@ export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Get()
-  getAll(@Req() req, @Res() res): Movie[] {
+  // @Req() req, @Res() res 이것도 가능은 함 근데 권장 x
+  getAll(): Movie[] {
     return this.moviesService.getAll();
   }
 
